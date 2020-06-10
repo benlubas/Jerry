@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const b5 = require("./lib.js");
+const auth = require("./auth.json");
 
 const bot = new Discord.Client();
 
@@ -115,7 +116,7 @@ bot.on("message", async (msg) => {
   }
 });
 
-bot.login("NzE4ODY2MjA4MzYyODU2NDc4.XtvHlA.K7ug1njJiJnf4RZkpbAxwV54BuQ");
+bot.login(auth.token);
 
 function getVoiceCallUsers(message) {
   return message.member.voiceChannel.members
