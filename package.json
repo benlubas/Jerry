@@ -1,0 +1,11 @@
+{
+  "name": "team-bot",
+  "verson": "0.1.0",
+  "description": "A bot that will make even teams out of anyone in a given call",
+  "author": "Ben Lubas & Jake Valentine",
+  "dependencies": {
+    "discord.js": "^11.6.3",
+    "nodemon": "^2.0.4",
+    "winston": "^3.2.1"
+  }
+}
