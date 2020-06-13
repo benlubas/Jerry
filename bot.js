@@ -125,8 +125,26 @@ bot.on("message", async (msg) => {
             `The teams are as follows: \n\n\`\`\`${output}\`\`\``
           );
           break;
+        case "help":
+          output = "";
+          output += "Commands are all prefixed by ._.\n";
+          output += "```flip - flip a coin\n";
+          output +=
+            "teams <Number> - assigns people in your call to <Number> teams\n";
+          output +=
+            "fetus <Number> skip? <SkipNumber?> - Mass deletes messages. Optional skip flag and skip number.";
+          output +=
+            "wheel <Params> - List the items that should be on the wheel separated by spaces. A random one will be returned";
+          output +=
+            "fuck-jake <Number?> - The bot says 'fuck jake' as many times as you want it to";
+          output += "say <String> - Will say whatever you want it to say";
+          output += "info - Tells you who you're in a call with";
+          output += "ping - Replies pong";
+          output += "```";
+          msg.channel.send(output);
+          break;
         default:
-          msg.channel.send("Command doesn't exist");
+          msg.channel.send("Try ._.help for help");
       }
     }
   }
